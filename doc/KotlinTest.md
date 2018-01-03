@@ -43,6 +43,7 @@ dependencies {
 
 ### Database connection pooling HikariCP
 * src/main/resources/database.propertiesを用意してHikariConfig(filename)しても見つけてくれない
+* this.class.getResourceAsStream()では駄目で、javaClass.classLoader.getResourceAsStream()
 * HikariConfig(Properties)はProperty driverがないといってエラーになる。jsonで用意して、Jacksonでenable commentするのが良さそう
 
 
